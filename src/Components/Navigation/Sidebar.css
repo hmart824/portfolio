@@ -1,0 +1,66 @@
+.menu {
+    position: absolute;
+    top: 0;
+    margin: 2rem 0 0 2rem;
+    height: 17rem;
+    width: 2.9rem;
+    z-index: 500;
+    /* color: white; */
+}
+.menu nav{
+    position: relative;
+    height: 17%;
+    width: 100%;
+    background-color: #3838388a;
+    border-radius: 1.4rem 1.4rem 1.4rem 1.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: height .2s ease-in;
+    color: #d5d5d5;
+}
+.menu .expand{
+    height: 100%;
+}
+.menu-icon{
+    font-size: 1.7rem;
+    height: 2.9rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    cursor: pointer;
+}
+nav a{
+    font-size: 1.7rem;
+    transform: translateY(0.5rem);
+    position: absolute;
+    opacity: 0;
+    transition: opacity .2s ease-in .2s , transform .2s ease-in .2s;
+    cursor: pointer;
+    color: #d5d5d5;
+}
+nav a:hover , .active{
+    color: var(--primary-blue) ;
+}
+nav a span{
+    position: absolute;
+    top: 0.3rem;
+    left: -1.5rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: left .2s ease-in .3s, opacity .2s ease-in .3s ,  visibility .2s ease-in;
+}
+.expand a span{
+    opacity: 1;
+    visibility: visible;
+    left: 2.5rem;
+}
+.expand a{
+    opacity: 1;
+    transform: translateY(calc(3.4rem * var(--i)));
+}

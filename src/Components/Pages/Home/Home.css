@@ -1,0 +1,93 @@
+.home-content{
+    height: 27rem;
+    width: 56rem;
+    /* border: 2px solid blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.profile-img{
+    height: 20rem;
+    width: 20rem;
+    position: relative;
+    border: 2px solid #3f3f3f;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.profile-img::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    inset: -14px 118px;
+    background: rgb(0,255,33);
+    background: linear-gradient(50deg, rgba(0,255,33,1) 0%, rgba(251,0,220,1) 50%, rgba(0,212,255,1) 100%);
+    animation: clockwise 2s linear infinite alternate;
+}
+
+@keyframes clockwise {
+    0%{
+        transform: rotate(0deg);
+        inset: -14px 135px;
+    }
+    100%{
+        transform: rotate(360deg);
+        inset: -14px 63px;
+    }
+}
+.profile-img .img{
+    position: absolute;
+    inset: .3rem;
+    border-radius: 50%;
+    background-color: white;
+    overflow: hidden;
+}
+.img img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.profile-content{
+    width: 30rem;
+    position: relative;
+}
+.profile-content h3{
+    font-size: 1.4rem;
+    font-weight: 200;
+    margin-bottom: 0.6rem;
+}
+.profile-content h1{
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: .1rem;
+    margin-bottom: 0.3rem;
+}
+.profile-content p{
+    font-size: 1.1rem;
+    letter-spacing: .1rem;
+}
+.profile-content .btn{
+    display: inline;
+}
+.profile-content button{
+    margin-top: .8rem;
+}
+.profile-content> a{
+    text-decoration: none;
+    position: absolute;
+    font-size: 1.5rem;
+    right: 0;
+    bottom: 0;
+    color: white;
+    transition: .2s;
+}
+.profile-content a:hover{
+    scale: 1.4;
+    color: var(--primary-blue);
+}
